@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+###### NAVIGATION #####
+
+alias home='cd ~'
+
+alias up='cd ..'
+
+alias g-n='cd ~/Developer/electron-gn/src'
+alias el='cd ~/Developer/electron-gn/src/electron'
+alias enode='cd ~/Developer/electron-gn/src/third_party/electron_node'
+
+##### TERMINAL COMMANDS ######
+
+alias _='sudo'
+alias cls='clear'
+alias a="code -a"
+alias g='git'
+
+alias spotoff='sudo mdutil -a -i off'
+alias spoton='sudo mdutil -a -i on'
+
+alias c='tr -d '\n' | pbcopy'
+
+##### PROCESSES #####
+
+alias serve='npx http-server -o'
+
+##### MISC ######
+
+alias localip='ipconfig getifaddr en0'
