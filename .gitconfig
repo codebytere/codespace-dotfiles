@@ -1,7 +1,6 @@
 [user]
 	name = Shelley Vohr
 	email = shelley.vohr@gmail.com
-	signingkey = 5599653C
 
 [core]
 	editor = code --wait
@@ -166,9 +165,6 @@
 	st = stash
 	sa = stash apply
 	sp = stash pop
-
-[commit]
-	gpgsign = true
 
 [fetch]
 	prune = true
