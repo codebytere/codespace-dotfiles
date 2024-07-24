@@ -29,3 +29,4 @@ alias serve='npx http-server -o'
 ##### MISC ######
 
 alias localip='ipconfig getifaddr en0'
+alias gist-dl='node ~/.gist-download.js'
