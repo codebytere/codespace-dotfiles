@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const gistId = process.argv[2];
-const gistDir = path.join(__dirname, gistId);
+const gistDir = path.join(process.cwd(), gistId);
 
 if (!/^[a-f0-9]{32}$/.test(gistId)) {
   console.error(`Invalid Gist ID: ${gistId}`);
