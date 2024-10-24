@@ -6,9 +6,10 @@ alias home='cd ~'
 
 alias up='cd ..'
 
-alias g-n='cd ~/workspaces/gclient/src'
-alias el='cd ~/workspaces/gclient/src/electron'
-alias enode='cd ~/workspaces/gclient/src/third_party/electron_node'
+alias g-n='cd /workspaces/gclient/src'
+alias el='cd /workspaces/gclient/src/electron'
+alias enode='cd /workspaces/gclient/src/third_party/electron_node'
+alias ev8='cd /workspaces/gclient/src/v8'
 
 ##### TERMINAL COMMANDS ######
 
