@@ -19,4 +19,4 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
 }
 
-export PS1="\n\t $BGREEN\w$BWHITE on $BMAGENTA\$(parse_git_branch)\[\033[00m\] $BBLUE❯ "
+export PS1="\n\t $BGREEN\W$BWHITE on $BMAGENTA\$(parse_git_branch)\[\033[00m\] $BBLUE❯ "
