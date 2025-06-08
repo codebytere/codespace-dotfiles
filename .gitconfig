@@ -2,6 +2,11 @@
 	name = Shelley Vohr
 	email = shelley.vohr@gmail.com
 
+[branch]
+	autosetuprebase = always
+	autosetupmerge = always
+	sort = committerdate
+
 [core]
 	editor = code --wait
 	excludesfile = ~/.gitignore
