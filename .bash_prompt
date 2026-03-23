@@ -16,7 +16,11 @@ WHITE='\[\e[0;37m\]'
 BWHITE='\[\e[1;37m\]'
 
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
+  local branch
+  branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/")
+  if [ -n "$branch" ]; then
+    printf '\001\e[1;37m\002 on \001\e[1;35m\002%s' "$branch"
+  fi
 }
 
-export PS1="\n\t $BGREEN\W$BWHITE on $BMAGENTA\$(parse_git_branch)\[\033[00m\] $BBLUE❯ "
+export PS1="\n\t $BGREEN\W\$(parse_git_branch)\[\033[00m\] $BBLUE❯ "
