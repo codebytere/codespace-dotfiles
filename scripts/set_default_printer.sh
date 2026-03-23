@@ -5,13 +5,16 @@ packages=("cups" "cups-pdf" "cups-client")
 
 echo "Checking for required packages"
 
+# Enable universe repo for cups-pdf availability.
+sudo apt-add-repository -y universe 2>/dev/null
+sudo apt-get update -qq
+
 for package in "${packages[@]}"; do
-  has_package=$(dpkg -l | grep $package)
-  if [ -z "$has_package" ]; then
-    echo "$package is not installed. Installing..."
-    sudo apt-get install -y $package
-  else
+  if dpkg -l "$package" 2>/dev/null | grep -q "^ii"; then
     echo "$package is already installed."
+  else
+    echo "$package is not installed. Installing..."
+    sudo apt-get install -y "$package" || echo "Warning: Failed to install $package, skipping."
   fi
 done
 
